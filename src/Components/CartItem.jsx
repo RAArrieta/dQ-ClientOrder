@@ -1,7 +1,9 @@
+import "./CartItem.css"
+
 const CartItem = ({ product, onRemoveFromCart }) => (
-    <div key={product.id} className="cart-item">
-      <p>{`${product.quantity} ${product.name} Sub: $ ${product.price}`}</p>
-      <button onClick={() => onRemoveFromCart(product.id)}>Eliminar del carrito</button>
+    <div key={product.id} className="cart-item products-order">
+      <p className="descriptionOrder">{`${product.quantity}    ${product.name}    Sub: $${product.price*product.quantity}`}</p>
+      <button onClick={() => onRemoveFromCart(product.id)}>Quitar</button>
     </div>
   );
   

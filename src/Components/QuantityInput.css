@@ -1,0 +1,10 @@
+.inputQuantity {
+  width: 80px;
+  height: 40px;
+}
+.labelAndInputQuantity {
+  height: 40px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+}

@@ -1,3 +1,5 @@
+import "./CategorySelector.css"
+
 const CategorySelector = ({
   category,
   products,
@@ -5,7 +7,7 @@ const CategorySelector = ({
   onChange,
 }) => (
   <div>
-    <label htmlFor={`${category}Select`}>{category}:</label>
+    <label className="category" htmlFor={`${category}Select`}>{category}:</label>
     <select
       id={`${category}Select`}
       onChange={(e) => onChange(category, e.target.value)}
@@ -15,13 +17,8 @@ const CategorySelector = ({
       {products
         .filter((product) => product.category === category)
         .map((product) => (
-          <option key={product.id} value={product.id}>
-            {
-              <div className="prodAndPrice">
-                <span>{product.name}</span>
-                <span>${product.price}</span>
-              </div>
-            }
+          <option key={product.id} value={product.id} className="prodAndPrice">
+            {`${product.name} $${product.price}`}
           </option>
         ))}
     </select>
