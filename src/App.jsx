@@ -1,8 +1,9 @@
 import "./App.css"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ClientsOrders from "./Pages/ClientsOrders";
-import FormOrders from "./Pages/FormOrders";
 import { OrderProvider } from "./Context/OrdersContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ClientsOrders from "./Pages/ClientsOrders/ClientsOrders";
+import FormOrders from "./Pages/FormOrders/FormOrders";
+
 
 function App() {
   return (

@@ -71,3 +71,39 @@
 }
 
 
+/* CART ITEM */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.descriptionOrder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-order{
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+}
+
+/* CATEGORY SELECTOR */
+.prodAndPrice {
+  display: "flex";
+  justify-content: "space-between";
+}
+
+/* QUANTITY INPUT */
+.inputQuantity {
+  width: 80px;
+  height: 40px;
+}
+.labelAndInputQuantity {
+  height: 40px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+}
