@@ -1,24 +1,24 @@
-import "./App.css"
-import { OrderProvider } from "./Context/OrdersContext";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { OrderProvider } from "./Context/OrdersContext"; // Importamos OrderProvider, no DataProvider
 import ClientsOrders from "./Pages/ClientsOrders/ClientsOrders";
 import FormOrders from "./Pages/FormOrders/FormOrders";
 import Header from "./Components/ClientsOrders/Header/Header";
 
-
-
 function App() {
   return (
-    <OrderProvider>
-      <BrowserRouter>
+    <OrderProvider> {/* Usamos OrderProvider */}
+      <Router>
         <Header />
         <Routes>
           <Route path="/" element={<ClientsOrders />} />
           <Route path="/pedido" element={<FormOrders />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </OrderProvider>
   );
 }
 
 export default App;
+
+
