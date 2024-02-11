@@ -1,7 +1,13 @@
-const CalculatorPrice = (quantityEmpanadas, priceEmpanadas) => {
-  console.log("Entre a CalculatorPrice")
-  console.log("quantityEmpanadas")
-  console.log(quantityEmpanadas)
+const CalculatorPriceEmp = (cart) => {
+  let priceEmpanadas = 0;
+
+  const quantityEmpanadas = cart.reduce((accumulator, product) => {
+    if (product.category === "Empanadas") {
+      return accumulator + product.quantity
+    } else {
+      return accumulator;
+    }
+  }, 0);
   
   if (quantityEmpanadas < 6) {
     priceEmpanadas = 400 * quantityEmpanadas;
@@ -16,4 +22,4 @@ const CalculatorPrice = (quantityEmpanadas, priceEmpanadas) => {
   return priceEmpanadas;
 }
 
-export default CalculatorPrice
+export default CalculatorPriceEmp

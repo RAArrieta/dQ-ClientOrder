@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import DataBase from "../DataBase/DataBase";
-import CalculatorPrice from "../Components/ClientsOrders/CalculatorPrice/CalculatorPrice";
+import CalculatorPriceEmp from "../Components/ClientsOrders/CalculatorPrice/CalculatorPriceEmp";
+import CalculatorPriceResto from "../Components/ClientsOrders/CalculatorPrice/CalculatorPriceResto";
 
 export const OrdersContext = createContext();
 
@@ -22,24 +23,8 @@ export const OrderProvider = ({ children }) => {
 
   // CALCULA EL TOTAL DEL PEDIDO
   useEffect(() => {
-    let priceEmpanadas = 0;
-    // let priceResto = 0;
-      
-    const quantityEmpanadas = cart.reduce((accumulator, product) => {    
-      if (product.category === "Empanadas") {
-        return accumulator + product.quantity
-      }
-      return accumulator + priceEmpanadas
-    }, 0);
-
-    const priceResto = cart.reduce((accumulator, product) => {
-      if (product.category !== "Empanadas") {
-        return accumulator + (product.quantity*product.price);
-      } 
-      
-    }, 0);
-    
-    priceEmpanadas = CalculatorPrice (quantityEmpanadas, priceEmpanadas);
+    const priceEmpanadas = CalculatorPriceEmp (cart);
+    const priceResto = CalculatorPriceResto (cart);
 
     const newTotal = priceEmpanadas + priceResto
     setTotal(newTotal);
