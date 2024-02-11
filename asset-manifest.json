@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/RAArrieta.github.io/dQ-ClientOrder/static/css/main.9aa34f53.css",
-    "main.js": "/RAArrieta.github.io/dQ-ClientOrder/static/js/main.44444abf.js",
-    "static/media/header.png": "/RAArrieta.github.io/dQ-ClientOrder/static/media/header.d8b8823dccc5d301cc3b.png",
-    "index.html": "/RAArrieta.github.io/dQ-ClientOrder/index.html",
-    "main.9aa34f53.css.map": "/RAArrieta.github.io/dQ-ClientOrder/static/css/main.9aa34f53.css.map",
-    "main.44444abf.js.map": "/RAArrieta.github.io/dQ-ClientOrder/static/js/main.44444abf.js.map"
+    "main.css": "/dQ-ClientOrder/static/css/main.9aa34f53.css",
+    "main.js": "/dQ-ClientOrder/static/js/main.58b8ee1b.js",
+    "static/media/header.png": "/dQ-ClientOrder/static/media/header.d8b8823dccc5d301cc3b.png",
+    "index.html": "/dQ-ClientOrder/index.html",
+    "main.9aa34f53.css.map": "/dQ-ClientOrder/static/css/main.9aa34f53.css.map",
+    "main.58b8ee1b.js.map": "/dQ-ClientOrder/static/js/main.58b8ee1b.js.map"
   },
   "entrypoints": [
     "static/css/main.9aa34f53.css",
-    "static/js/main.44444abf.js"
+    "static/js/main.58b8ee1b.js"
   ]
 }
