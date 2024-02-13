@@ -17,7 +17,7 @@ export const OrderProvider = ({ children }) => {
   // selectedProducts ES EL PRODUCTO SELECCIONADO SIN CARGAR
   const [selectedProducts, setSelectedProducts] = useState({});
   // productQuantities ES LA CANTIDAD DEL PRODUCTO ELEGIDO
-  const [productQuantities, setProductQuantities] = useState({});
+  const [productQuantities, setProductQuantities] = useState(1);
   // cartOn CONTROLA QUE SE MUESTRE TERMINAR PEDIDO
   const [cartOn, setCartOn] = useState(true);
 

@@ -5,17 +5,20 @@ import QuantityInput from "./QuantityInput";
 import AddProduct from "./AddProduct";
 
 const ProductSelector = () => {
-  const { allCategories } = useContext(OrdersContext);
+  const { allCategories, selectedProducts } = useContext(OrdersContext);
 
   return (
     <>
       {allCategories.map((category) => (
         <div key={category} className="category-container">
           <CategorySelector category={category} />
-          <div className="quantity-button-container">
-            <QuantityInput category={category} />
-            <AddProduct category={category} />
-          </div>
+          {Object.keys(selectedProducts).length !== 0 &&
+            <div className="quantity-button-container">
+              <QuantityInput category={category} />
+              <AddProduct category={category} />
+            </div>
+          }
+
         </div>
       ))}
     </>
