@@ -27,7 +27,7 @@ const QuantityInput = ({ category }) => {
 
   return (
     <div className="labelAndInputQuantity">
-      <label htmlFor={`${category}Quantity`}>Cantidad:</label>
+      <label className="cantidad" htmlFor={`${category}Quantity`}>Cantidad</label>
       <div className="quantity-controls">
         <button onClick={decrementQuantity}>-</button>
         <input

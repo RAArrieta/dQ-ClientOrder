@@ -45,7 +45,7 @@ const AddProduct = ({ category }) => {
   };
 
   return (
-    <button onClick={() => handleAddToCart(selectedProducts[category])}>
+    <button className="btnAgregar" onClick={() => handleAddToCart(selectedProducts[category])}>
       Agregar
     </button>
   );

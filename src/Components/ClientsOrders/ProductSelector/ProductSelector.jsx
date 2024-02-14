@@ -12,7 +12,7 @@ const ProductSelector = () => {
       {allCategories.map((category) => (
         <div key={category} className="category-container">
           <CategorySelector category={category} />
-          {Object.keys(selectedProducts).length !== 0 &&
+          {(selectedProducts[category] && Object.keys(selectedProducts).length !== 0) &&
             <div className="quantity-button-container">
               <QuantityInput category={category} />
               <AddProduct category={category} />

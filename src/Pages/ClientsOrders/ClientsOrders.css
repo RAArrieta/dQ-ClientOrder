@@ -1,20 +1,18 @@
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 720px;
+  /* margin: 0 auto;
+  padding: 20px; */
 }
-
-/* label {
-  display: block;
-
-  font-size: 10px;
-} */
 
 .category {
   display: block;
-
+  
   margin-bottom: 10px;
   font-size: 25px;
+}
+
+.cantidad {
+  padding-right: 15px;
 }
 
 .ttAndBtnClsOrdr {
@@ -32,8 +30,6 @@
   padding-left: 10px;
   padding-right: 10px;
   line-height: 2;
-  /* padding: 10px;
-  margin-bottom: 10px; */
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -96,14 +92,24 @@
   justify-content: "space-between";
 }
 
+.btnAgregar {
+  width: 150px;
+}
+
 /* QUANTITY INPUT */
 .inputQuantity {
   width: 80px;
   height: 40px;
+  text-align: center;
 }
 .labelAndInputQuantity {
   height: 40px;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
 }
