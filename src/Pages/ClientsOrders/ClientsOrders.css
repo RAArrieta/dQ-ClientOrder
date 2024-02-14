@@ -4,9 +4,10 @@
 
 .category {
   display: block;
-  
   margin-bottom: 10px;
+
   font-size: 28px;
+  font-weight: 500;
 }
 
 .cantidad {
@@ -87,6 +88,7 @@
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 15px;
+  margin:0px 20px 0px 20px;
 }
 
 /* CATEGORY SELECTOR */
@@ -94,15 +96,21 @@
   display: "flex";
   justify-content: "space-between";
 }
-
+.btnAgregar_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 .btnAgregar {
-  width: 150px;
+  width: 260px;
 }
 
 /* QUANTITY INPUT */
 .inputQuantity {
   width: 80px;
   height: 40px;
+
+  font-size: 25px;
   text-align: center;
 }
 .labelAndInputQuantity {

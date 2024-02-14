@@ -12,13 +12,17 @@ const ProductSelector = () => {
       {allCategories.map((category) => (
         <div key={category} className="category-container">
           <CategorySelector category={category} />
-          {(selectedProducts[category] && Object.keys(selectedProducts).length !== 0) &&
-            <div className="quantity-button-container">
-              <QuantityInput category={category} />
-              <AddProduct category={category} />
-            </div>
-          }
-
+          {selectedProducts[category] &&
+            Object.keys(selectedProducts).length !== 0 && (
+              <div>
+                <div className="quantity-button-container">
+                  <QuantityInput category={category} />
+                </div>
+                <div className="btnAgregar_container">
+                  <AddProduct category={category} />
+                </div>
+              </div>
+            )}
         </div>
       ))}
     </>
