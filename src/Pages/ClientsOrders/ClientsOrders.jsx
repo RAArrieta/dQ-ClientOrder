@@ -13,10 +13,10 @@ const ClientsOrders = () => {
   }, [setCartOn])
 
   return (
-    <div className="container">
+    <>
       {total !== 0 && <Cart />}
       <ProductSelector />
-    </div>
+    </>
   );
 };
 
