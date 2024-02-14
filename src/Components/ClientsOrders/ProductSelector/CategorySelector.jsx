@@ -19,6 +19,7 @@ const CategorySelector = ({
         {category}:
       </label>
       <select
+      className="selectInput"
         id={`${category}Select`}
         onChange={(e) => handleCategoryChange (category, e.target.value)}
         value={selectedProducts[category] || ""}
