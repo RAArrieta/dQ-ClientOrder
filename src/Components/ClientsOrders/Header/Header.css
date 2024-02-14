@@ -1,6 +1,10 @@
 .header {
     display: flex;
     justify-content: center;
-    width: 720px;
-    height: 350px;
+    width: 100%;
+
+}
+
+.imgHeader {
+    width: 100%;
 }
