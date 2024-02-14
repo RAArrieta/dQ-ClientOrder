@@ -24,7 +24,7 @@ const Cart = () => {
         <p className="total">Total: ${total}</p>
         {cartOn ? (
           <Link className="btnCloseOrder" to="/pedido">
-            Terminar Pedido
+            Comprar
           </Link>)
           :
           (<Link className="btnCloseOrder" to="/">

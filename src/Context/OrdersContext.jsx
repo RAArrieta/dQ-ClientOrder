@@ -20,6 +20,10 @@ export const OrderProvider = ({ children }) => {
   const [productQuantities, setProductQuantities] = useState(1);
   // cartOn CONTROLA QUE SE MUESTRE TERMINAR PEDIDO
   const [cartOn, setCartOn] = useState(true);
+  // orderClient LE CARGO EL PEDIDO ANTES DE SUBIRLO
+  const [orderClient, setOrderClient] = useState ([]);
+
+  const [orderClientOn, setOrderClientOn] = useState(false)
 
   // CALCULA EL TOTAL DEL PEDIDO
   useEffect(() => {
@@ -53,6 +57,10 @@ export const OrderProvider = ({ children }) => {
         setProductQuantities,
         cartOn,
         setCartOn,
+        orderClient,
+        setOrderClient,
+        orderClientOn,
+        setOrderClientOn
       }}
     >
       {children}

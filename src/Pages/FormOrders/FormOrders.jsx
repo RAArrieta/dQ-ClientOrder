@@ -1,17 +1,30 @@
+import "./FormOrders.css";
 import { useContext, useEffect } from "react";
 import Cart from "../../Components/ClientsOrders/Cart/Cart";
 import { OrdersContext } from "../../Context/OrdersContext";
+import FormOrder from "../../Components/FormOrders/FormOrder";
+import OrderClient from "../../Components/FormOrders/OrderClient";
 
 const FormOrders = () => {
-  const { setCartOn } = useContext(OrdersContext);
+  const { setCartOn, orderClientOn } = useContext(OrdersContext);
 
-  useEffect(()=>{
+  useEffect(() => {
     setCartOn(false);
-  }, [setCartOn])
+  }, [setCartOn]);
 
   return (
     <div className="container">
-      <Cart />
+      {!orderClientOn && (
+        <div>
+          <Cart />
+          <FormOrder />
+        </div>
+      )}
+      {orderClientOn && (
+        <div>
+          <OrderClient />
+        </div>
+      )}
     </div>
   );
 };
