@@ -15,12 +15,15 @@
 .btnTerminarPedido {
   width: 260px;
 }
-.container {
+
+.containerSaludo {
   display: flex;
   justify-content: center;
 }
-
-.containerSaludo {
+.saludo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 20px;
   width: 80%;
   background-color: white;

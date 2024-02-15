@@ -13,7 +13,7 @@ const FormOrders = () => {
   }, [setCartOn]);
 
   return (
-    <div className="container">
+    <div >
       {!orderClientOn && (
         <div>
           <Cart />
