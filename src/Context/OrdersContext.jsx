@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import DataBase from "../DataBase/DataBase";
 import CalculatorPriceEmp from "../Components/ClientsOrders/CalculatorPrice/CalculatorPriceEmp";
 import CalculatorPriceResto from "../Components/ClientsOrders/CalculatorPrice/CalculatorPriceResto";
+import FetchOrder from "../DataBase/FetchOrder";
 
 export const OrdersContext = createContext();
 
@@ -20,8 +21,9 @@ export const OrderProvider = ({ children }) => {
   const [productQuantities, setProductQuantities] = useState(1);
   // cartOn CONTROLA QUE SE MUESTRE TERMINAR PEDIDO
   const [cartOn, setCartOn] = useState(true);
-  // orderClient LE CARGO EL PEDIDO ANTES DE SUBIRLO
-  const [orderClient, setOrderClient] = useState ([]);
+
+  // const [orders, setOrders] = useState ([]);
+  const orders = FetchOrder();
 
   const [orderClientOn, setOrderClientOn] = useState(false)
 
@@ -57,8 +59,8 @@ export const OrderProvider = ({ children }) => {
         setProductQuantities,
         cartOn,
         setCartOn,
-        orderClient,
-        setOrderClient,
+        orders,
+        // setOrders,
         orderClientOn,
         setOrderClientOn
       }}
