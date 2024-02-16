@@ -1,16 +1,15 @@
 import "./ClientsOrders.css";
 import React, { useContext, useEffect } from "react";
 import { OrdersContext } from "../../Context/OrdersContext";
-import Cart from "../../Components/ClientsOrders/Cart/Cart";
+import Cart from "../../Components/Cart/Cart";
 import ProductSelector from "../../Components/ClientsOrders/ProductSelector/ProductSelector";
-
 
 const ClientsOrders = () => {
   const { total, setCartOn } = useContext(OrdersContext);
 
-  useEffect(()=>{
+  useEffect(() => {
     setCartOn(true);
-  }, [setCartOn])
+  }, [setCartOn]);
 
   return (
     <>

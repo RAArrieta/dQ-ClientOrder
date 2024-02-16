@@ -3,7 +3,6 @@ import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
 const DataBase = () => {
-
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -18,7 +17,7 @@ const DataBase = () => {
     });
   }, []);
 
-  return products
-}
+  return products;
+};
 
-export default DataBase
+export default DataBase;

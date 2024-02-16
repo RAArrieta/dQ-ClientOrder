@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 const FetchOrder = () => {
-    const [orders, setOrders] = useState ([]);
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     const ordersRef = collection(db, "Pedidos");

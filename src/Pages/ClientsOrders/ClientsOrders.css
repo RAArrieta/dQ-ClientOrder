@@ -70,7 +70,6 @@
   justify-content: space-around;
 }
 
-
 /* CART ITEM */
 .cart-item {
   display: flex;
@@ -83,12 +82,12 @@
   justify-content: space-between;
 }
 
-.products-order{
+.products-order {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 15px;
-  margin:0px 20px 0px 20px;
+  margin: 0px 20px 0px 20px;
 }
 
 /* CATEGORY SELECTOR */

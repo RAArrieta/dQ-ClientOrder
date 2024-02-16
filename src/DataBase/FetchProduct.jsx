@@ -4,7 +4,9 @@ import { OrdersContext } from "../Context/OrdersContext";
 const FetchProduct = (productCode) => {
   const { products } = useContext(OrdersContext);
 
-  const foundProduct = products.find((product) => Number(product.id) === productCode);
+  const foundProduct = products.find(
+    (product) => Number(product.id) === productCode
+  );
 
   return foundProduct;
 };

@@ -14,8 +14,8 @@ const FormOrderRetiro = () => {
       const nuevoId =
         orders.length > 0
           ? (Number(orders[orders.length - 1].id) + 1)
-            .toString()
-            .padStart(3, "0")
+              .toString()
+              .padStart(3, "0")
           : "001";
 
       const db = getFirestore();

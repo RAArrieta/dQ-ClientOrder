@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 const BtnCancelTerm = () => {
-  const { setCart } = useContext(OrdersContext)
+  const { setCart } = useContext(OrdersContext);
   const { reset } = useForm();
 
   const confirmarCancelar = () => {
@@ -21,12 +21,18 @@ const BtnCancelTerm = () => {
 
   return (
     <div className="btnCancelTerm">
-      <Link className="button btnTerminarCancel" onClick={confirmarCancelar} to="/">Cancelar</Link>
+      <Link
+        className="button btnTerminarCancel"
+        onClick={confirmarCancelar}
+        to="/"
+      >
+        Cancelar
+      </Link>
       <button className="btnTerminarPedido" type="submit">
         Terminar Pedido
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default BtnCancelTerm
+export default BtnCancelTerm;

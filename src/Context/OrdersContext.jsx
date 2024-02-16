@@ -25,14 +25,14 @@ export const OrderProvider = ({ children }) => {
   // const [orders, setOrders] = useState ([]);
   const orders = FetchOrder();
 
-  const [orderClientOn, setOrderClientOn] = useState(false)
+  const [orderClientOn, setOrderClientOn] = useState(false);
 
   // CALCULA EL TOTAL DEL PEDIDO
   useEffect(() => {
-    const priceEmpanadas = CalculatorPriceEmp (cart);
-    const priceResto = CalculatorPriceResto (cart);
+    const priceEmpanadas = CalculatorPriceEmp(cart);
+    const priceResto = CalculatorPriceResto(cart);
 
-    const newTotal = priceEmpanadas + priceResto
+    const newTotal = priceEmpanadas + priceResto;
     setTotal(newTotal);
   }, [cart]);
 
@@ -62,7 +62,7 @@ export const OrderProvider = ({ children }) => {
         orders,
         // setOrders,
         orderClientOn,
-        setOrderClientOn
+        setOrderClientOn,
       }}
     >
       {children}

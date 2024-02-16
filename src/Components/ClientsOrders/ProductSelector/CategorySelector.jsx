@@ -1,10 +1,9 @@
 import { useContext } from "react";
 import { OrdersContext } from "../../../Context/OrdersContext";
 
-const CategorySelector = ({
-  category,
-}) => {
-  const { products, selectedProducts, setSelectedProducts } = useContext(OrdersContext);
+const CategorySelector = ({ category }) => {
+  const { products, selectedProducts, setSelectedProducts } =
+    useContext(OrdersContext);
 
   const handleCategoryChange = (category, productId) => {
     setSelectedProducts((prevSelectedProducts) => ({
@@ -19,9 +18,9 @@ const CategorySelector = ({
         {category}:
       </label>
       <select
-      className="selectInput"
+        className="selectInput"
         id={`${category}Select`}
-        onChange={(e) => handleCategoryChange (category, e.target.value)}
+        onChange={(e) => handleCategoryChange(category, e.target.value)}
         value={selectedProducts[category] || ""}
       >
         <option value="">Seleccionar...</option>
