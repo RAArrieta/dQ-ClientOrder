@@ -21,7 +21,7 @@ const FormOrders = () => {
         </div>
       )}
       {orderClientOn && (
-        <div className="containerSaludo">
+        <div className="containerPedido">
           <OrderClient />
         </div>
       )}

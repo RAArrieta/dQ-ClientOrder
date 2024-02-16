@@ -16,15 +16,16 @@
   width: 260px;
 }
 
-.containerSaludo {
+.containerPedido {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .saludo {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+  padding: 5px 20px 5px 20px;
   width: 80%;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -67,4 +68,19 @@
   height: 40px;
   border: none;
   cursor: pointer;
+}
+
+.pedido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 20px 5px 20px;
+  margin: 20px 0 20px 0;
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detallePedido {
+  margin: 5px;
 }

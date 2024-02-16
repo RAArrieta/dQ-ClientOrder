@@ -22,7 +22,7 @@ const FormOrderRetiro = () => {
 
       const subo = {
         ...formData,
-        direccion: "RETIRA EN SUCURSAL",
+        direccion: "Retiro en Sucursal",
         productos: cart,
         total: total,
         fecha: serverTimestamp(),
@@ -31,6 +31,8 @@ const FormOrderRetiro = () => {
       const orderRef = doc(db, "Pedidos", nuevoId.toString());
 
       await setDoc(orderRef, subo);
+
+      localStorage.setItem(`pedido`, JSON.stringify(subo));
 
       setCart([]);
       reset();
