@@ -29,3 +29,42 @@
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.apilarBtnClsOrd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.btnClosedOrder {
+  width: 80%;
+  height: 40px;
+  font-size: 20px;
+
+}
+
+.firma {
+  text-align: right;
+}
+
+.btnCancelTerm {
+  display: flex;
+  column-gap: 20px;
+}
+
+.btnTerminarCancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  text-decoration: none;
+  list-style-type: none;
+  background-color: #4caf50;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}

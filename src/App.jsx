@@ -7,7 +7,7 @@ import Header from "./Components/ClientsOrders/Header/Header";
 
 function App() {
   return (
-    <OrderProvider> {/* Usamos OrderProvider */}
+    <OrderProvider>
       <Router>
         <Header />
         <Routes>

@@ -2,8 +2,8 @@ import "./FormOrders.css";
 import { useContext, useEffect } from "react";
 import Cart from "../../Components/ClientsOrders/Cart/Cart";
 import { OrdersContext } from "../../Context/OrdersContext";
-import FormOrder from "../../Components/FormOrders/FormOrder";
 import OrderClient from "../../Components/FormOrders/OrderClient";
+import OptionClosedOrder from "../../Components/FormOrders/OptionClosedOrder";
 
 const FormOrders = () => {
   const { setCartOn, orderClientOn } = useContext(OrdersContext);
@@ -17,7 +17,7 @@ const FormOrders = () => {
       {!orderClientOn && (
         <div>
           <Cart />
-          <FormOrder />
+          <OptionClosedOrder />
         </div>
       )}
       {orderClientOn && (
