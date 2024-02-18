@@ -8,7 +8,7 @@ const ProductSelector = () => {
   const { allCategories, selectedProducts } = useContext(OrdersContext);
 
   return (
-    <>
+    <div className="container_select">
       {allCategories.map((category) => (
         <div key={category} className="category-container">
           <CategorySelector category={category} />
@@ -25,7 +25,7 @@ const ProductSelector = () => {
             )}
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
