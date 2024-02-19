@@ -18,8 +18,9 @@ const CartItem = ({ product }) => {
               `}
         {product.category !== "Empanadas" && (
           <div>
-            <p>{`${product.quantity}   ${product.name}`}</p>
-            <p>{`      Sub: $${product.price * product.quantity}`}</p>
+            <p className="descripcion">{`${product.quantity}   ${product.name}`}</p>
+            <p className="descripcion">{`...Sub: $${product.price * product.quantity}`}</p>
+
           </div>
         )}
       </p>

@@ -56,9 +56,12 @@
 
 .category-container {
   margin-top: -70px;
+  height: 550px;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
-.container-select{
+.container-select {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,37 +75,40 @@
   width: 90%;
   height: 120px;
 
-  margin: 5px 20px 20px 20px;
+  margin: 15px 20px 20px 20px;
   padding: 20px 0 0 20px;
-  
+
   border: none;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(15, 15, 15, 0.1);
 
   font-size: 30px;
-  color:black;
+  color: black;
   font-weight: bold;
   text-align: center;
-  -webkit-text-stroke: 1px white; 
+  -webkit-text-stroke: 1px white;
 }
 
 .selectInputPizzas {
   background-image: url("../../Img/pizzas.png");
   background-size: cover;
 }
-.selectInputSandwichs{
+.selectInputSandwichs {
   background-image: url("../../Img/sandwichs.png");
   background-size: cover;
 }
-.selectInputEmpanadas{
+.selectInputEmpanadas {
   background-image: url("../../Img/empanadas.png");
   background-size: cover;
 }
-.selectInputMinutas{
+.selectInputMinutas {
   background-image: url("../../Img/minutas.png");
   background-size: cover;
-} 
-
+}
+.selectInputBebidas {
+  background-image: url("../../Img/bebidas.png");
+  background-size: cover;
+}
 
 .quantity-button-container {
   margin: -5px 0 10px 0;
@@ -115,10 +121,10 @@
   display: flex;
   justify-content: center;
 }
-.container-cart{
+.container-cart {
   width: 85%;
   background-color: rgb(238, 238, 238);
-  margin-top:-70px;
+  margin-top: -70px;
   margin-bottom: 80px;
   padding: 10px;
   border-radius: 10px;
@@ -132,6 +138,7 @@
 .descriptionOrder {
   display: flex;
   justify-content: space-between;
+  margin: 0;
 }
 
 .products-order {
@@ -140,6 +147,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 15px;
   margin: 0px 20px 0px 20px;
+}
+
+.descripcion {
+  margin: 0;
 }
 
 /* CATEGORY SELECTOR */

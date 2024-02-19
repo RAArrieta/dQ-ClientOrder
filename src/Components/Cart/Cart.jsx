@@ -16,7 +16,7 @@ const Cart = () => {
         ))}
         {priceEmpanadas !== 0 && (
           <p className="descriptionOrder cart-item products-order">
-            Empanadas Sub: ${priceEmpanadas}
+            Empanadas ...Sub: ${priceEmpanadas}
           </p>
         )}
         <div className="ttAndBtnClsOrdr">

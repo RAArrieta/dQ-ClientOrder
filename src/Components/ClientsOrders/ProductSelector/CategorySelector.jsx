@@ -19,7 +19,8 @@ const CategorySelector = ({ category }) => {
           category === "Pizzas" ? "selectInputPizzas" :
           category === "Sandwichs" ? "selectInputSandwichs" :
           category === "Empanadas" ? "selectInputEmpanadas" :
-          category === "Minutas" ? "selectInputMinutas" : ""
+          category === "Minutas" ? "selectInputMinutas" :
+          category === "Bebidas" ? "selectInputBebidas" : ""
         }`}
         id={`${category}Select`}
         onChange={(e) => handleCategoryChange(category, e.target.value)} 
