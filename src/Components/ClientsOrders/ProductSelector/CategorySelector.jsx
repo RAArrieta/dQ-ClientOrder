@@ -14,16 +14,18 @@ const CategorySelector = ({ category }) => {
 
   return (
     <>
-      <label className="category" htmlFor={`${category}Select`}>
-        {category}:
-      </label>
       <select
-        className="selectInput"
+        className={`selectInput ${
+          category === "Pizzas" ? "selectInputPizzas" :
+          category === "Sandwichs" ? "selectInputSandwichs" :
+          category === "Empanadas" ? "selectInputEmpanadas" :
+          category === "Minutas" ? "selectInputMinutas" : ""
+        }`}
         id={`${category}Select`}
-        onChange={(e) => handleCategoryChange(category, e.target.value)}
+        onChange={(e) => handleCategoryChange(category, e.target.value)} 
         value={selectedProducts[category] || ""}
       >
-        <option value="">Seleccionar...</option>
+        <option value="">{category}</option>
         {products
           .filter((product) => product.category === category)
           .map((product) => (

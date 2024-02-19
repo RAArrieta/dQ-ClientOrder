@@ -9,28 +9,30 @@ const Cart = () => {
   const priceEmpanadas = CalculatorPriceEmp(cart);
 
   return (
-    <>
-      {cart.map((product) => (
-        <CartItem key={product.id} product={product} />
-      ))}
-      {priceEmpanadas !== 0 && (
-        <p className="descriptionOrder cart-item products-order">
-          Empanadas Sub: ${priceEmpanadas}
-        </p>
-      )}
-      <div className="ttAndBtnClsOrdr">
-        <p className="total">Total: ${total}</p>
-        {cartOn ? (
-          <Link className="btnCloseOrder" to="/pedido">
-            Comprar
-          </Link>
-        ) : (
-          <Link className="btnCloseOrder" to="/">
-            Volver
-          </Link>
+    <div className="ajusto-container-cart">
+      <div className="container-cart">
+        {cart.map((product) => (
+          <CartItem key={product.id} product={product} />
+        ))}
+        {priceEmpanadas !== 0 && (
+          <p className="descriptionOrder cart-item products-order">
+            Empanadas Sub: ${priceEmpanadas}
+          </p>
         )}
+        <div className="ttAndBtnClsOrdr">
+          <p className="total">Total: ${total}</p>
+          {cartOn ? (
+            <Link className="btnCloseOrder" to="/pedido">
+              Comprar
+            </Link>
+          ) : (
+            <Link className="btnCloseOrder" to="/">
+              Volver
+            </Link>
+          )}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

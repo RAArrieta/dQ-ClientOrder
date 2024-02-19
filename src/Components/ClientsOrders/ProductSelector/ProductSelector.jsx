@@ -8,9 +8,9 @@ const ProductSelector = () => {
   const { allCategories, selectedProducts } = useContext(OrdersContext);
 
   return (
-    <div className="container_select">
+    <div className="category-container">
       {allCategories.map((category) => (
-        <div key={category} className="category-container">
+        <div key={category} className="container-select">
           <CategorySelector category={category} />
           {selectedProducts[category] &&
             Object.keys(selectedProducts).length !== 0 && (
