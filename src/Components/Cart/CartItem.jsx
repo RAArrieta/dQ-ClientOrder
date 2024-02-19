@@ -16,12 +16,12 @@ const CartItem = ({ product }) => {
               ${product.quantity} 
               ${product.name} 
               `}
-        {product.category !== "Empanadas" &&
-          `
-          ${product.quantity} 
-          ${product.name} 
-          Sub: $${product.price * product.quantity}
-        `}
+        {product.category !== "Empanadas" && (
+          <div>
+            <p>{`${product.quantity}   ${product.name}`}</p>
+            <p>{`      Sub: $${product.price * product.quantity}`}</p>
+          </div>
+        )}
       </p>
       <button onClick={() => handleRemoveFromCart(product.id)}>Quitar</button>
     </div>
