@@ -1,10 +1,9 @@
 .footer {
+  padding: 0;
   width: 100%;
   position: fixed;
-  bottom: 0;
 }
 
 .imgfooter {
   width: 100%;
-
 }
