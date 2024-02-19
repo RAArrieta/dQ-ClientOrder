@@ -1,8 +1,13 @@
 .title {
     position: static;
-    margin-top: 53px;
+    margin-top: 57.36px;
     width: 100%;
     height: 100px;
     background-color: yellow;
-    padding: 10px 0 0 20px;
+    /* padding: 10px -20px -10px 20px; */
+}
+
+.tab {
+    padding: 15px 0 0 20px;
+    font-weight: bold;
 }
