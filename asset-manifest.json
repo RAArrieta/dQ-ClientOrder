@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dQ-ClientOrder/static/css/main.7784f1f3.css",
-    "main.js": "/dQ-ClientOrder/static/js/main.0e321aad.js",
+    "main.css": "/dQ-ClientOrder/static/css/main.2c249338.css",
+    "main.js": "/dQ-ClientOrder/static/js/main.c47ec317.js",
     "static/media/pizzas.png": "/dQ-ClientOrder/static/media/pizzas.fed4a47519e9b579ba82.png",
     "static/media/sandwichs.png": "/dQ-ClientOrder/static/media/sandwichs.b597430201813ed423cf.png",
     "static/media/empanadas.png": "/dQ-ClientOrder/static/media/empanadas.89a5ffc946ad668f2d38.png",
@@ -10,11 +10,11 @@
     "static/media/footer.png": "/dQ-ClientOrder/static/media/footer.f6443a6475fd6cbd23a9.png",
     "static/media/header.png": "/dQ-ClientOrder/static/media/header.395097ac3c313f7e018a.png",
     "index.html": "/dQ-ClientOrder/index.html",
-    "main.7784f1f3.css.map": "/dQ-ClientOrder/static/css/main.7784f1f3.css.map",
-    "main.0e321aad.js.map": "/dQ-ClientOrder/static/js/main.0e321aad.js.map"
+    "main.2c249338.css.map": "/dQ-ClientOrder/static/css/main.2c249338.css.map",
+    "main.c47ec317.js.map": "/dQ-ClientOrder/static/js/main.c47ec317.js.map"
   },
   "entrypoints": [
-    "static/css/main.7784f1f3.css",
-    "static/js/main.0e321aad.js"
+    "static/css/main.2c249338.css",
+    "static/js/main.c47ec317.js"
   ]
 }
