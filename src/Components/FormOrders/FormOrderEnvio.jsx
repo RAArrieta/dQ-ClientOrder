@@ -1,3 +1,4 @@
+import "./FormOrder.css";
 import { useContext, useEffect, useState } from "react";
 import { OrdersContext } from "../../Context/OrdersContext";
 import { useForm } from "react-hook-form";
@@ -50,8 +51,8 @@ const FormOrderEnvio = () => {
       } catch (error) {
         console.error("Error al crear el pedido: ", error);
       }
-    }else {
-      alert(`Su pedido debe superar los $${minTotal} para el envío...`)
+    } else {
+      alert(`Su pedido debe superar los $${minTotal} para el envío...`);
     }
   };
 

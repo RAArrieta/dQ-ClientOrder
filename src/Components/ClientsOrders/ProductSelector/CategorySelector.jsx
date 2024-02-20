@@ -1,3 +1,4 @@
+import "./CategorySelector.css"
 import { useContext } from "react";
 import { OrdersContext } from "../../../Context/OrdersContext";
 
@@ -19,7 +20,7 @@ const CategorySelector = ({ category }) => {
           category === "Pizzas" ? "selectInputPizzas" :
           category === "Sandwichs" ? "selectInputSandwichs" :
           category === "Empanadas" ? "selectInputEmpanadas" :
-          category === "Minutas" ? "selectInputMinutas" :
+          category === "Minutas" ? "selectInputMinutas" : 
           category === "Bebidas" ? "selectInputBebidas" : ""
         }`}
         id={`${category}Select`}
@@ -33,7 +34,6 @@ const CategorySelector = ({ category }) => {
             <option
               key={product.id}
               value={product.id}
-              className="prodAndPrice"
             >
               {`${product.name} $${product.price}`}
             </option>

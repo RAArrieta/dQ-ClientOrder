@@ -1,6 +1,8 @@
+import "./OptionClosedOrder.css";
 import { useState } from "react";
 import FormOrderEnvio from "./FormOrderEnvio";
 import FormOrderRetiro from "./FormOrderRetiro";
+import Cart from "../Cart/Cart";
 
 const OptionClosedOrder = () => {
   const [retiroOn, setRetiroOn] = useState(null);
@@ -14,7 +16,8 @@ const OptionClosedOrder = () => {
   };
 
   return (
-    <div>
+    <>
+      <Cart />
       <div className="apilarBtnClsOrd">
         <button className="btnClosedOrder" onClick={handleBtnRetiro}>
           Retiro por Sucursal
@@ -23,11 +26,11 @@ const OptionClosedOrder = () => {
           Envio a Domicilio
         </button>
       </div>
-      <div>
+      <>
         {retiroOn === true && <FormOrderRetiro />}
         {retiroOn === false && <FormOrderEnvio />}
-      </div>
-    </div>
+      </>
+    </>
   );
 };
 

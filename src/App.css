@@ -1,15 +1,11 @@
 body {
-  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white;
-}
+  margin-top: 110px;
 
-select,
-input {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
+  background-color: white;
+
+  font-family: "Arial", sans-serif;
 }
 
 button {
@@ -21,15 +17,4 @@ button {
   height: 40px;
   border: none;
   cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-@media screen and (max-width: 600px) {
-  .container {
-    max-width: 100%;
-    padding: 10px;
-  }
 }

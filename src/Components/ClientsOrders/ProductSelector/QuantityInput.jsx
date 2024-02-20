@@ -1,3 +1,4 @@
+import "./QuantityInput.css";
 import React, { useContext } from "react";
 import { OrdersContext } from "../../../Context/OrdersContext";
 

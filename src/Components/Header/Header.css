@@ -1,9 +1,13 @@
 .header {
     width: 100%;
+    height: 60px;  
     position: fixed;
     top: 0;
+    
+    background-size: cover;
 }
 
 .imgHeader {
     width: 100%;
+    height: 100%;
 }

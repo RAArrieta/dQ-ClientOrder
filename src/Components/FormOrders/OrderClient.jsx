@@ -1,3 +1,4 @@
+import "./OrderClient.css"
 import { useEffect, useState } from "react";
 
 const OrderClient = () => {
@@ -13,12 +14,12 @@ const OrderClient = () => {
   }, []);
 
   return (
-    <>
+    <div className="containerPedido">
       {pedido && (
         <div className="pedido">
           <h4>Tus datos</h4>
           {pedido.nombre !== "" && (
-            <h4 className="detallePedido">Nombre: {pedido.nombre}</h4>
+            <p className="detallePedido">Nombre: {pedido.nombre}</p>
           )}
           {pedido.direccion === "Retiro en Sucursal" ? (
             <p className="detallePedido">{pedido.direccion}</p>
@@ -47,7 +48,7 @@ const OrderClient = () => {
         <p>Te informaremos cuando este listo tu pedido...</p>
         <h4 className="firma">don Quijote</h4>
       </div>
-    </>
+    </div>
   );
 };
 
