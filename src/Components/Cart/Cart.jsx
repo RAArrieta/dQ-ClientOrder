@@ -16,7 +16,7 @@ const Cart = () => {
           <CartItem key={product.id} product={product} />
         ))}
         {priceEmpanadas !== 0 && (
-          <p className="descriptionOrder cart-item products-order">
+          <p className="descriptionOrderEmp cart-item products-order">
             Empanadas ...Sub: ${priceEmpanadas}
           </p>
         )}

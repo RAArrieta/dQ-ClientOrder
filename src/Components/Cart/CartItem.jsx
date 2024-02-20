@@ -20,7 +20,6 @@ const CartItem = ({ product }) => {
           <div>
             <p className="descripcion">{`${product.quantity}   ${product.name}`}</p>
             <p className="descripcion">{`...Sub: $${product.price * product.quantity}`}</p>
-
           </div>
         )}
       </p>

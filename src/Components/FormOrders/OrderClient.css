@@ -7,10 +7,13 @@
 .pedido {
   display: flex;
   flex-direction: column;
+
   padding: 5px 20px 5px 20px;
   margin: 0px 0 20px 0;
   width: 80%;
+
   background-color: white;
+  border: solid 1px rgb(212, 212, 212);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -30,6 +33,7 @@
   padding: 5px 20px 5px 20px;
   width: 80%;
 
+  border: solid 1px rgb(212, 212, 212);
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
