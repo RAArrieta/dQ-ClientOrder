@@ -8,9 +8,9 @@
 
   font-size: 30px;
   color: white;
-  font-weight: bold;
+  font-weight: 900;
   text-align: center;
-  /* -webkit-text-stroke: 1px rgb(5, 5, 5); */
+  -webkit-text-stroke: 1px rgb(5, 5, 5);
 }
 
 .selectInputPizzas {
