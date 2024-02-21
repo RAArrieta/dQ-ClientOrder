@@ -10,7 +10,7 @@ const CartItem = ({ product }) => {
 
   return (
     <div key={product.id} className="cart-item products-order">
-      <p className="descriptionOrder">
+      <div className="descriptionOrder">
         {product.category === "Empanadas" &&
           `
               ${product.quantity} 
@@ -22,7 +22,7 @@ const CartItem = ({ product }) => {
             <p className="descripcion">{`...Sub: $${product.price * product.quantity}`}</p>
           </div>
         )}
-      </p>
+      </div>
       <button onClick={() => handleRemoveFromCart(product.id)}>Quitar</button>
     </div>
   );

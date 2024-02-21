@@ -1,46 +1,61 @@
-import "./OrderClient.css"
-import { useEffect, useState } from "react";
+import { OrdersContext } from "../../Context/OrdersContext";
+import GetDataLS from "../../DataBase/GetDataLS";
+import "./OrderClient.css";
+import { useContext } from "react";
 
 const OrderClient = () => {
-  const [pedido, setPedido] = useState(null);
+  const { pedidoLS } = useContext(OrdersContext);
 
-  useEffect(() => {
-    const pedidoGuardado = localStorage.getItem("pedido");
-    if (pedidoGuardado) {
-      const pedidoParseado = JSON.parse(pedidoGuardado);
-      setPedido(pedidoParseado);
-      localStorage.removeItem("pedido");
-    }
-  }, []);
+  GetDataLS ();
+  // const [pedidoLS, setPedidoLS] = useState(null);
+
+  // useEffect(() => {
+  //   const pedidoGuardado = localStorage.getItem("pedido");
+  //   if (pedidoGuardado) {
+  //     const pedidoParseado = JSON.parse(pedidoGuardado);
+  //     setPedidoLS(pedidoParseado);
+  //     // localStorage.removeItem("pedido");
+  //   }
+  // }, []);
+
+  // const formatFecha = (fechaString) => {
+  //   if (fechaString === "new Date().toISOString()") {
+  //     return "";
+  //   } else {
+  //     const fecha = new Date(fechaString);
+  //     return fecha.toLocaleString();
+  //   }
+  // };
 
   return (
     <div className="containerPedido">
-      {pedido && (
+      {pedidoLS && (
         <div className="pedido">
           <h4>Tus datos</h4>
-          {pedido.nombre !== "" && (
-            <p className="detallePedido">Nombre: {pedido.nombre}</p>
+          {/* <p>{formatFecha(pedidoLS.fecha)}</p> */}
+          {pedidoLS.nombre !== "" && (
+            <p className="detallePedido">Nombre: {pedidoLS.nombre}</p>
           )}
-          {pedido.direccion === "Retiro en Sucursal" ? (
-            <p className="detallePedido">{pedido.direccion}</p>
+          {pedidoLS.direccion === "Retiro en Sucursal" ? (
+            <p className="detallePedido">{pedidoLS.direccion}</p>
           ) : (
-            <p className="detallePedido">Dirección: {pedido.direccion}</p>
+            <p className="detallePedido">Dirección: {pedidoLS.direccion}</p>
           )}
-          {pedido.observaciones !== "" && (
+          {pedidoLS.observaciones !== "" && (
             <p className="detallePedido">
-              Observaciones: {pedido.observaciones}
+              Observaciones: {pedidoLS.observaciones}
             </p>
           )}
-          {pedido.telefono !== "" && (
-            <p className="detallePedido">Teléfono: {pedido.telefono}</p>
+          {pedidoLS.telefono !== "" && (
+            <p className="detallePedido">Teléfono: {pedidoLS.telefono}</p>
           )}
           <h4>Tu pedido:</h4>
-          {pedido.productos.map((el) => (
+          {pedidoLS.productos.map((el) => (
             <p className="detallePedido" key={el.id}>
               {el.quantity} {el.name}
             </p>
           ))}
-          <h4 className="firma">Total: ${pedido.total}</h4>
+          <h4 className="firma">Total: ${pedidoLS.total}</h4>
         </div>
       )}
       <div className="saludo">

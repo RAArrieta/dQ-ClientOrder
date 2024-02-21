@@ -2,7 +2,7 @@ import "./FormOrder.css";
 import { useContext, useEffect, useState } from "react";
 import { OrdersContext } from "../../Context/OrdersContext";
 import { useForm } from "react-hook-form";
-import { serverTimestamp, getFirestore, doc, setDoc } from "firebase/firestore";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
 import BtnCancelTerm from "./BtnCancelTerm";
 
 const FormOrderEnvio = () => {
@@ -32,18 +32,28 @@ const FormOrderEnvio = () => {
 
         const db = getFirestore();
 
-        const subo = {
+        const newOrder = {
           ...formData,
           productos: cart,
           total: total,
-          fecha: serverTimestamp(),
+          fecha: new Date().toISOString(),
+          estado: "PENDIENTE",
+          pedido: nuevoId,
         };
 
         const orderRef = doc(db, "Pedidos", nuevoId.toString());
 
-        await setDoc(orderRef, subo);
+        await setDoc(orderRef, newOrder);
 
-        localStorage.setItem(`pedido`, JSON.stringify(subo));
+        // localStorage.setItem(`pedido`, JSON.stringify(newOrder));
+      // Paso 1: Obtener pedidos existentes del almacenamiento local
+      let existingOrders = JSON.parse(localStorage.getItem("pedidos")) || [];
+
+      // Paso 2: Agregar el nuevo pedido a la lista de pedidos existentes
+      existingOrders.push(newOrder);
+
+      // Paso 3: Almacenar la lista actualizada de pedidos en el almacenamiento local
+      localStorage.setItem("pedidos", JSON.stringify(existingOrders));
 
         setCart([]);
         reset();

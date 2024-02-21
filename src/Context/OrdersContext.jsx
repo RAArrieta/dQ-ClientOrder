@@ -25,6 +25,8 @@ export const OrderProvider = ({ children }) => {
   // const [orders, setOrders] = useState ([]);
   const orders = FetchOrder();
 
+  // pedidoLS es el pedido conseguido de localStorage
+  const [pedidoLS, setPedidoLS] = useState(null);
   const [orderClientOn, setOrderClientOn] = useState(false);
 
   // CALCULA EL TOTAL DEL PEDIDO
@@ -63,6 +65,8 @@ export const OrderProvider = ({ children }) => {
         // setOrders,
         orderClientOn,
         setOrderClientOn,
+        pedidoLS, 
+        setPedidoLS
       }}
     >
       {children}

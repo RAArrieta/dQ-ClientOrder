@@ -28,6 +28,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0 10px 0 10px;
   margin: 0px 20px 0px 20px;
+
 }
 
 .descriptionOrder {
@@ -43,6 +44,7 @@
 
 .descripcion {
   margin: 0;
+  margin: 5px 0 5px 0;
 }
 .ttAndBtnClsOrdr {
   width: 100%;

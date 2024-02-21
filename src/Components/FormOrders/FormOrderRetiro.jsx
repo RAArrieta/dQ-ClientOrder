@@ -2,7 +2,7 @@ import "./FormOrder.css";
 import { useContext } from "react";
 import { OrdersContext } from "../../Context/OrdersContext";
 import { useForm } from "react-hook-form";
-import { serverTimestamp, getFirestore, doc, setDoc } from "firebase/firestore";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
 import BtnCancelTerm from "./BtnCancelTerm";
 
 const FormOrderRetiro = () => {
@@ -21,19 +21,24 @@ const FormOrderRetiro = () => {
 
       const db = getFirestore();
 
-      const subo = {
+      const newOrder = {
         ...formData,
-        direccion: "Retiro en Sucursal",
         productos: cart,
         total: total,
-        fecha: serverTimestamp(),
+        fecha: new Date().toISOString(),
+        estado: "PENDIENTE",
+        pedido: nuevoId,
       };
 
       const orderRef = doc(db, "Pedidos", nuevoId.toString());
 
-      await setDoc(orderRef, subo);
+      await setDoc(orderRef, newOrder);
 
-      localStorage.setItem(`pedido`, JSON.stringify(subo));
+      // localStorage.setItem(`pedido`, JSON.stringify(newOrder));
+
+      let existingOrders = JSON.parse(localStorage.getItem("pedidos")) || [];
+      existingOrders.push(newOrder);
+      localStorage.setItem("pedidos", JSON.stringify(existingOrders));
 
       setCart([]);
       reset();
