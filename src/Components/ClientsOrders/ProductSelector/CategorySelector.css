@@ -3,14 +3,14 @@
   height: 120px;
 
   border: none;
-  border-radius: 30px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(15, 15, 15, 0.1);
 
   font-size: 30px;
-  color: black;
-  font-weight: 900;
+  color: white;
+  font-weight: bold;
   text-align: center;
-  -webkit-text-stroke: 1.2px white;
+  /* -webkit-text-stroke: 1px rgb(5, 5, 5); */
 }
 
 .selectInputPizzas {
@@ -32,4 +32,8 @@
 .selectInputBebidas {
   background-image: url("../../../Img/bebidas.png");
   background-size: cover;
+}
+
+option {
+  color: black;
 }

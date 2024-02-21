@@ -15,10 +15,10 @@ const ProductSelector = () => {
           <CategorySelector category={category} />
           {selectedProducts[category] &&
             Object.keys(selectedProducts).length !== 0 && (
-              <>
+              <div className="container-quantity-addprod">
                 <QuantityInput className="quantity-button-container" category={category} />
                 <AddProduct category={category} />
-              </>
+              </div>
             )}
         </div>
       ))}
