@@ -22,7 +22,6 @@ export const OrderProvider = ({ children }) => {
   // cartOn CONTROLA QUE SE MUESTRE TERMINAR PEDIDO
   const [cartOn, setCartOn] = useState(true);
 
-  // const [orders, setOrders] = useState ([]);
   const orders = FetchOrder();
 
   // pedidoLS es el pedido conseguido de localStorage
@@ -62,7 +61,6 @@ export const OrderProvider = ({ children }) => {
         cartOn,
         setCartOn,
         orders,
-        // setOrders,
         orderClientOn,
         setOrderClientOn,
         pedidoLS, 

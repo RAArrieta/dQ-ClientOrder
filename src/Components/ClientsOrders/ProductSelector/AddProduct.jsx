@@ -1,4 +1,4 @@
-import "./AddProduct.css"
+import "./AddProduct.css";
 import { useContext } from "react";
 import { OrdersContext } from "../../../Context/OrdersContext";
 
@@ -47,6 +47,8 @@ const AddProduct = ({ category }) => {
         [category]: "",
       }));
     }
+    let componente = document.getElementById("refreshCart");
+    componente.scrollTop = 0;
   };
 
   return (

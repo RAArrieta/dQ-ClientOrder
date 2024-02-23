@@ -45,15 +45,15 @@ const FormOrderEnvio = () => {
 
         await setDoc(orderRef, newOrder);
 
-        // localStorage.setItem(`pedido`, JSON.stringify(newOrder));
-      // Paso 1: Obtener pedidos existentes del almacenamiento local
-      let existingOrders = JSON.parse(localStorage.getItem("pedidos")) || [];
+        localStorage.setItem(`pedido`, JSON.stringify(newOrder));
+      // // Paso 1: Obtener pedidos existentes del almacenamiento local
+      // let existingOrders = JSON.parse(localStorage.getItem("pedidos")) || [];
 
-      // Paso 2: Agregar el nuevo pedido a la lista de pedidos existentes
-      existingOrders.push(newOrder);
+      // // Paso 2: Agregar el nuevo pedido a la lista de pedidos existentes
+      // existingOrders.push(newOrder);
 
-      // Paso 3: Almacenar la lista actualizada de pedidos en el almacenamiento local
-      localStorage.setItem("pedidos", JSON.stringify(existingOrders));
+      // // Paso 3: Almacenar la lista actualizada de pedidos en el almacenamiento local
+      // localStorage.setItem("pedidos", JSON.stringify(existingOrders));
 
         setCart([]);
         reset();

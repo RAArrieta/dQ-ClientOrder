@@ -34,11 +34,11 @@ const FormOrderRetiro = () => {
 
       await setDoc(orderRef, newOrder);
 
-      // localStorage.setItem(`pedido`, JSON.stringify(newOrder));
+      localStorage.setItem(`pedido`, JSON.stringify(newOrder));
 
-      let existingOrders = JSON.parse(localStorage.getItem("pedidos")) || [];
-      existingOrders.push(newOrder);
-      localStorage.setItem("pedidos", JSON.stringify(existingOrders));
+      // let existingOrders = JSON.parse(localStorage.getItem("pedidos")) || [];
+      // existingOrders.push(newOrder);
+      // localStorage.setItem("pedidos", JSON.stringify(existingOrders));
 
       setCart([]);
       reset();

@@ -1,22 +1,24 @@
-import { OrdersContext } from "../../Context/OrdersContext";
-import GetDataLS from "../../DataBase/GetDataLS";
+// import { OrdersContext } from "../../Context/OrdersContext";
+// import GetDataLS from "../../DataBase/GetDataLS";
+import { useEffect, useState } from "react";
 import "./OrderClient.css";
-import { useContext } from "react";
+import { Link } from "react-router-dom";
+// import { useContext } from "react";
 
 const OrderClient = () => {
-  const { pedidoLS } = useContext(OrdersContext);
+  // const { pedidoLS } = useContext(OrdersContext);
 
-  GetDataLS ();
-  // const [pedidoLS, setPedidoLS] = useState(null);
+  // GetDataLS ();
+  const [pedidoLS, setPedidoLS] = useState(null);
 
-  // useEffect(() => {
-  //   const pedidoGuardado = localStorage.getItem("pedido");
-  //   if (pedidoGuardado) {
-  //     const pedidoParseado = JSON.parse(pedidoGuardado);
-  //     setPedidoLS(pedidoParseado);
-  //     // localStorage.removeItem("pedido");
-  //   }
-  // }, []);
+  useEffect(() => {
+    const pedidoGuardado = localStorage.getItem("pedido");
+    if (pedidoGuardado) {
+      const pedidoParseado = JSON.parse(pedidoGuardado);
+      setPedidoLS(pedidoParseado);
+      localStorage.removeItem("pedido");
+    }
+  }, []);
 
   // const formatFecha = (fechaString) => {
   //   if (fechaString === "new Date().toISOString()") {
@@ -63,6 +65,7 @@ const OrderClient = () => {
         <p>Te informaremos cuando este listo tu pedido...</p>
         <h4 className="firma">don Quijote</h4>
       </div>
+      <Link to="/" className="nuevo_pedido">Nuevo Pedido</Link>
     </div>
   );
 };

@@ -9,6 +9,8 @@ const Cart = () => {
   const { cart, total, cartOn } = useContext(OrdersContext);
   const priceEmpanadas = CalculatorPriceEmp(cart);
 
+  console.log(cartOn)
+
   return (
     <div className="ajusto-container-cart">
       <div className="container-cart">
@@ -16,7 +18,7 @@ const Cart = () => {
           <CartItem key={product.id} product={product} />
         ))}
         {priceEmpanadas !== 0 && (
-          <p className="descriptionOrderEmp cart-item products-order">
+          <p className="cart-item products-order descriptionOrderEmp">
             Empanadas ...Sub: ${priceEmpanadas}
           </p>
         )}

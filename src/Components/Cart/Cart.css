@@ -23,6 +23,7 @@
 
 .products-order {
   width: 90%;
+  height: 51px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -38,8 +39,7 @@
 }
 
 .descriptionOrderEmp{
-  padding-top: 8px;
-  padding-bottom: 8px;
+  height: 40px;
 }
 
 .descripcion {
