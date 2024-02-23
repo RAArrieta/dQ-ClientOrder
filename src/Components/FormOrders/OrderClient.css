@@ -38,10 +38,17 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.container_nuevo_pedido {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  padding-right: 20px;
+}
+
 .nuevo_pedido {
   margin: 0;
-  margin-top: 15px;
-  width: 45%;
+  margin-bottom: 15px;
+  width: 50%;
   height: 40px;
 
   display: flex;

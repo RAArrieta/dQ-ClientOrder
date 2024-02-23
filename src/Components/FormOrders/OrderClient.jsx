@@ -31,6 +31,11 @@ const OrderClient = () => {
 
   return (
     <div className="containerPedido">
+      <div className="container_nuevo_pedido">
+        <Link to="/" className="nuevo_pedido">
+          Nuevo Pedido
+        </Link>
+      </div>
       {pedidoLS && (
         <div className="pedido">
           <h4>Tus datos</h4>
@@ -65,7 +70,6 @@ const OrderClient = () => {
         <p>Te informaremos cuando este listo tu pedido...</p>
         <h4 className="firma">don Quijote</h4>
       </div>
-      <Link to="/" className="nuevo_pedido">Nuevo Pedido</Link>
     </div>
   );
 };
